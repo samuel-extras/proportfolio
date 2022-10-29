@@ -241,7 +241,7 @@ const Portfolio = ({ portfolioRef }) => {
         </ul>
       </div>
       <div className="flex flex-wrap justify-center relative">
-        <h2 className="absolute dark:text-white text-gray-700 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10">
+        <h2 className="absolute dark:text-white text-gray-700 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0  -z-10 text-8xl font-bold opacity-10">
           PROJECTS
         </h2>{" "}
         {currentPortfolioData?.map(

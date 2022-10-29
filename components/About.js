@@ -113,7 +113,7 @@ const About = ({ aboutRef, contactRef, color }) => {
           </Swiper>
           <div className="flex flex-col relative justify-start items-start w-full md:w-1/2 p-4 z-10">
             <h2
-              className={`absolute text-gray-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10`}
+              className={`absolute text-gray-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10 -z-10`}
             >
               {" "}
               ABOUT
@@ -133,14 +133,13 @@ const About = ({ aboutRef, contactRef, color }) => {
             <p
               className={`text-gray-800 dark:text-gray-100 text-base font-medium text-justify leading-10 `}
             >
-              Diligent software engineer with 5+ years of experience in
-              commercial application and software development. Eager to join
-              Cyclone Inc. to build innovative and cutting-edge business
-              solutions for the impressive suite of clients within its global
-              reach. In previous roles, slashed downtime by 25% and ensured 98%
-              on-time project completion. Also identified and dealt with a
-              significant process bottleneck that boosted coding efficiency by
-              35% when resolved.
+              Knowledgeable, diligent and skilled software development
+              professional with over 5 years of experience offering advanced
+              abilities in a wide range of programming languages, including
+              JavaScript, TypeScript, and Solidity. Quickly understands
+              requirements for new systems and creates high-quality, clean, and
+              robust code. Familiar with testing, debugging, and correcting
+              problems found in existing software systems.
             </p>
             <div className="flex justify-center items-center mt-4 w-full">
               <button

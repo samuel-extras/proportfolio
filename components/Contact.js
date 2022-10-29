@@ -16,7 +16,7 @@ const Contact = ({ contactRef }) => {
         </h2>
       </div>
       <div className="w-full relative flex flex-col md:flex-row ">
-        <h2 className="absolute dark:text-white text-gray-700 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10">
+        <h2 className="absolute dark:text-white text-gray-700 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10 -z-10">
           CONTACT
         </h2>{" "}
         <div className="w-full h-auto md:w-1/2 p-10 ">
@@ -78,7 +78,7 @@ const Contact = ({ contactRef }) => {
                 >
                   <BsWhatsapp
                     size={28}
-                    className="mr-4 dark:text-gray-100 text-gray-600 hover:text-[#25D366]"
+                    className="mr-4 dark:text-gray-100 text-gray-600 dark:hover:text-[#25D366] hover:text-[#25D366]"
                   />{" "}
                 </a>
                 <a
@@ -88,7 +88,7 @@ const Contact = ({ contactRef }) => {
                 >
                   <BsMessenger
                     size={28}
-                    className="mr-4 dark:text-gray-100 text-gray-600 hover:text-[#006AFF]"
+                    className="mr-4 dark:text-gray-100 text-gray-600 dark:hover:text-[#006AFF] hover:text-[#006AFF]"
                   />{" "}
                 </a>
                 <a
@@ -98,7 +98,7 @@ const Contact = ({ contactRef }) => {
                 >
                   <AiOutlineMail
                     size={28}
-                    className="mr-4 dark:text-gray-100 text-gray-600 hover:text-[#DB4437]"
+                    className="dark:text-gray-100 cursor-pointer text-gray-600 dark:hover:text-[#DB4437] hover:text-[#DB4437]"
                   />
                 </a>
               </div>
@@ -143,7 +143,7 @@ const Contact = ({ contactRef }) => {
                   />
                 </div>
               </div>
-              <button className="bg-transparent hover:bg-gray-500 dark:hover:bg-gray-300 dark:bg-transparent dark:text-gray-400 text-gray-600 self-end mt-4 font-semibold hover:text-gray-200 py-2 px-4 border dark:border-gray-200 border-gray-600 hover:border-transparent dark:hover:border-none dark:hover:text-black rounded">
+              <button className="bg-transparent hover:bg-gray-500 dark:hover:bg-gray-300 dark:bg-transparent dark:text-gray-400 text-gray-600 self-end mt-4 font-semibold hover:text-gray-200 py-2 px-4 border dark:border-gray-200 border-gray-600 hover:border-transparent dark:hover:border-none dark:hover:text-black rounded whitespace-nowrap">
                 Send Message
               </button>
             </form>{" "}

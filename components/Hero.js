@@ -5,6 +5,11 @@ import Typewriter from "typewriter-effect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { useTheme } from "next-themes";
+import {
+  MdOutlineNightlightRound,
+  MdLightMode,
+  MdDownload,
+} from "react-icons/md";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -42,23 +47,21 @@ const Hero = ({ homeRef, color }) => {
     if (currentTheme === "dark") {
       return (
         <button
-          className={`border rounded-sm p-2 text-[${color.text}]`}
+          className={`border hover:bg-gray-700 rounded-lg border-gray-700 p-2`}
           onClick={() => setTheme("light")}
           type="button"
         >
-          {" "}
-          dark{" "}
+          <MdLightMode className="text-gray-300 w-6 h-6" />
         </button>
       );
     }
     return (
       <button
-        className={`border rounded-sm p-2 text-[${color.text}]`}
+        className={`border hover:bg-gray-300 rounded-lg p-2`}
         onClick={() => setTheme("dark")}
         type="button"
       >
-        {" "}
-        Light{" "}
+        <MdOutlineNightlightRound className="text-black w-6 h-6" />
       </button>
     );
   };
@@ -132,7 +135,76 @@ const Hero = ({ homeRef, color }) => {
                         <div
                           className={`absolute -mr-10 right-1/4 sm:right-1/2 p-4 md:w-64 w-52 rounded-md bg-white dark:bg-gray-900 shadow-md`}
                         >
-                          {renderThemeToggle()}
+                          <div className="flex justify-between">
+                            {renderThemeToggle()}
+                            <div className="border dark:hover:bg-gray-700 hover:bg-gray-300 rounded-lg border-gray-300 dark:border-gray-700 p-2">
+                              <a
+                                className=""
+                                href="/samuelajibola_cv.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download
+                              >
+                                <MdDownload className="w-6 h-6 dark:text-gray-300 text-gray-700" />
+                              </a>
+                            </div>
+                          </div>
+                          <div className="flex flex-wrap gap-3 justify-center items-center my-2">
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#7400b8] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#9CEC5B] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#F2BB05] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#292994] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#e07be0] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                            <div className="relative">
+                              <input
+                                type="checkbox"
+                                id="toggleB"
+                                className="sr-only"
+                              />
+                              <div className="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+                              <div className="dot absolute left-1 top-1 bg-[#ff0000] w-6 h-6 rounded-full transition"></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </Popover.Panel>
@@ -166,7 +238,7 @@ const Hero = ({ homeRef, color }) => {
               />{" "}
               <div className="flex ml-2 italic">
                 <hr
-                  className={`w-8 text-lg self-center mr-2 text-gray-900 dark:text-gray-50 `}
+                  className={`w-8 text-lg self-center mr-2 border border-gray-900 dark:border-gray-50 `}
                 />
                 <Typewriter
                   options={{
@@ -327,13 +399,14 @@ const Hero = ({ homeRef, color }) => {
         <FaTwitter className="cursor-pointer w-6 h-6" />
         <hr className="w-6 rotate-[90deg] mt-2" />
       </div> */}
-      <div className=" animate-bounce hidden sm:block  absolute bottom-10 right-1 ">
+      <div className=" animate-bounce hidden sm:block absolute bottom-10 z-30 right-1 group">
         <div
-          className={`hover:text-gray-900 dark:hover:text-gray-50 text-gray-600 dark:text-gray-300 rotate-[90deg] cursor-pointer flex justify-center items-center hover:font-bold`}
+          className="hover:text-gray-900 text-gray-600 dark:text-gray-300 rotate-[90deg] hover:cursor-pointer flex items-center hover:font-bold "
+          onClick={() => {}}
         >
           scroll down
           <hr
-            className={`w-6 ml-2 hover:text-gray-50 cursor-pointer text-gray-300 dark:text-gray-400 hover:font-bold`}
+            className={`w-6 ml-2 hover:text-gray-50 cursor-pointer border border-gray-600 dark:border-gray-400 hover:font-bold`}
           />
         </div>
       </div>

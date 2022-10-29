@@ -52,10 +52,9 @@ const experiences = [
       "Implemented rapid prototypes to get products to market quickly.",
       "Cultivated and established best practices for mobile applications and evangelized continuous delivery with a focus on speed, risks, and fast end-user feedback.",
       "Focused on continuous improvement by keeping up-to-date on the latest Android and iOS developments and trends and presenting for architectural review.",
-      "Developed a power finance mobile application using react native",
     ],
     keyAchievement:
-      "Maintained maximum uninterrupted flow of business-critical ops. Cut downtime by 25% and costs of warranty by up to 45%.",
+      "Developed a power finance mobile application using react native",
   },
   {
     position: "Full Stack Software Developer",
@@ -81,8 +80,7 @@ const experiences = [
       "Researched problems discovered in testing or production and developed solutions.",
       "Updated web pages and navigation tools to meet the client's current needs and improve usability.",
     ],
-    keyAchievement:
-      "Maintained maximum uninterrupted flow of business-critical ops. Cut downtime by 25% and costs of warranty by up to 45%.",
+    keyAchievement: "",
   },
 ];
 
@@ -110,7 +108,7 @@ const Experience = ({ experienceRef, color }) => {
 
       <div className="flex relative flex-wrap">
         <h2
-          className={`absolute text-gray-900 dark:text-gray-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0   text-8xl font-bold opacity-10`}
+          className={`absolute text-gray-900 dark:text-gray-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0  -z-10 text-8xl font-bold opacity-10`}
         >
           EXPERIENCE
         </h2>{" "}
