@@ -78,16 +78,13 @@ const services = [
 
 const Services = ({ servicesRef, contactRef }) => {
   return (
-    <section
-      className="w-full container min-h-screen my-10 md:p-10 p-4"
-      ref={servicesRef}
-    >
+    <section className="w-full my-10 md:p-10 p-4" ref={servicesRef}>
       <div className="w-full mb-10">
         <h2 className="dark:text-gray-300 text-gray-700 align-middle text-4xl font-bold mb-12">
           {"What I'm good at"}
         </h2>
       </div>
-      <div className="relative flex flex-col flex-wrap md:flex-row">
+      <div className="relative flex flex-col justify-center flex-wrap md:flex-row">
         <h2 className="absolute dark:text-white text-gray-500 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-90 sm:rotate-0  -z-10 text-8xl font-bold opacity-10">
           SERVICES
         </h2>{" "}

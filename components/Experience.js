@@ -97,7 +97,7 @@ const Experience = ({ experienceRef, color }) => {
 
   return (
     <section
-      className="w-full container min-h-screen my-10 md:p-10 p-4 overflow-hidden"
+      className="w-full my-10 md:p-10 p-4 overflow-hidden"
       ref={experienceRef}
     >
       <h2

@@ -44,7 +44,7 @@ const Testimonial = () => {
           modules={[Pagination, Autoplay]}
           className="mt-4"
           autoplay={{
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
         >
@@ -59,7 +59,7 @@ const Testimonial = () => {
                 <dd className="pt-8 text-base dark:text-gray-300 text-gray-700 group-hover:text-white italic">
                   {feature.description}
                 </dd>
-                <div className="flex flex-row justify-start max-w-full">
+                <div className="flex flex-row justify-start max-w-full mt-3">
                   <div className="mr-2 min-w-fit">
                     <img
                       src={feature.image}
@@ -91,15 +91,14 @@ const features = [
     name: "Korede Oluwabusuyi",
     company: "Akortech Services and consult",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    image:
-      "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "We want to reflect our satisfaction with the cooperation in developing our web application. We are delighted with the solution provided to us by Samuel and with the communication flow through the project.",
+    image: "/koredeBusuyi.jpg",
   },
   {
     name: "Ogunleye Opeyemi",
     company: "Extras Beauty",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "I am so glad that I found Samuel. He is an excellent software developer, he takes the time to make sure everything functions in the best way possible. He is always working to improve my website and make it better for me and that means a lot to me!",
     image:
       "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -107,7 +106,15 @@ const features = [
     name: "Oluwatobiloba Emmanuel",
     company: "Codehood Guru",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Samuel is the best developer I have come across in all my years of experience. He is a master at what he does and this is just the tip of the iceberg. I love his attitude, communication skill, and timely delivery. I recommend him.",
+    image:
+      "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    name: "Harry Deuce",
+    company: "Codehood Guru",
+    description:
+      "As a junior Software developer, I always trust Samuel's judgment on any project. He is the best software developer I have come across, and he is super kind to his teammates too. I remember when he helped me with a bug in the system and not only did he fix it quickly, but also taught me some new tricks that would help me in future projects. Really thankful to him!.",
     image:
       "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },

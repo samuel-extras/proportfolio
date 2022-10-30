@@ -2,13 +2,12 @@ import React from "react";
 
 import { BsWhatsapp, BsMessenger } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
+import { MdLocationPin, MdOutlineAlternateEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Contact = ({ contactRef }) => {
   return (
-    <div
-      className="w-full min-h-screen my-10 md:p-8 p-4 overflow-hidden"
-      ref={contactRef}
-    >
+    <div className="w-full my-10 md:p-8 p-4 overflow-hidden" ref={contactRef}>
       <div className="w-full pl-10 ">
         {" "}
         <h2 className="dark:text-gray-300 text-gray-700 align-middle text-4xl font-bold mb-4">
@@ -26,7 +25,7 @@ const Contact = ({ contactRef }) => {
               Contact
             </h2>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col ">
             <div className="my-3">
               <p className="text-base dark:text-gray-100 text-gray-600 text-center">
                 Knowledgeable and skilled software development professional with
@@ -34,28 +33,30 @@ const Contact = ({ contactRef }) => {
                 range of programming languages.{" "}
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center my-2">
-              <p className="font-bold dark:text-gray-100 text-gray-600">
-                Address
-              </p>
+            <div className="flex my-2">
+              <MdLocationPin className=" w-6 h-6 mr-2 font-bold dark:text-gray-100 text-gray-600" />
+
               <p className="italic dark:text-gray-100 text-gray-600">
                 Lagos, LA 100011 Nigeria
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center my-2">
-              <p className="font-bold dark:text-gray-100 text-gray-600">
-                Phone
-              </p>
+            <div className="flex my-2">
+              <FaPhoneAlt className=" w-5 h-5 mr-2 font-bold dark:text-gray-100 text-gray-600" />
+
               <a href="tel:+2349033728282">
-                <p className="italic dark:text-gray-100 text-gray-600 hover:underline hover:text-blue-500">
+                <p className="italic mr-2 dark:text-gray-100 text-gray-600 hover:underline hover:text-blue-500">
                   +234 9033728282
                 </p>
               </a>
+              <a href="tel:+2349033728282">
+                <p className="italic dark:text-gray-100 text-gray-600 hover:underline hover:text-blue-500">
+                  +234 8023222822
+                </p>
+              </a>
             </div>
-            <div className="flex flex-col justify-center items-center my-2">
-              <p className="font-bold dark:text-gray-100 text-gray-600">
-                Email
-              </p>
+            <div className="flex my-2">
+              <MdOutlineAlternateEmail className=" w-6 h-6 mr-2 font-bold dark:text-gray-100 text-gray-600" />
+
               <a
                 href="mailto:samuel88783.so@gmail.com"
                 target="_blank"
@@ -66,10 +67,7 @@ const Contact = ({ contactRef }) => {
                 </p>
               </a>
             </div>
-            <div className="flex flex-col justify-center items-center my-2">
-              <p className="font-bold dark:text-gray-100 text-gray-600   pb-2">
-                Message me
-              </p>
+            <div className="flex my-2">
               <div className="flex ">
                 <a
                   href="https://wa.me/+2349033728282"
@@ -113,12 +111,15 @@ const Contact = ({ contactRef }) => {
                 Contact Form
               </h2>
             </div>
-            <form className="w-full flex flex-col justify-center items-center pt-4 px-4">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="w-full flex flex-col justify-center items-center pt-4 px-4"
+            >
               <div className="flex flex-col gap-4">
                 <div className="flex flex-col md:flex-row items-center mt-4 justify-between gap-4">
                   <div className="border-b dark:border-gray-300 border-gray-600 w-full md:w-1/2 my-3">
                     <input
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 dark:text-gray-200 py-3 px-4 leading-normal focus:outline-none"
+                      className="appearance-none required:text-red-300 bg-transparent border-none w-full text-gray-700 dark:text-gray-200 py-3 px-4 leading-normal focus:outline-none"
                       type="text"
                       placeholder="Name"
                       aria-label="Full name"

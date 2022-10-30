@@ -69,7 +69,15 @@ const Hero = ({ homeRef, color }) => {
   return (
     <section className="max-h-screen overflow-hidden" ref={homeRef}>
       <div className="flex justify-between items-center">
-        <div className=""> Ajibola Samuel</div>
+        <div className="fixed z-10 w-16 h-16">
+          <img alt="logo" src="/logo_white.png" className="w-16 h-16" />
+          <img
+            alt="logo"
+            src="/logo_black.png"
+            className="w-16 h-16 absolute top-0 dark:hidden"
+          />
+        </div>
+        <div></div>
         <div className="flex justify-between items-center">
           <div className="flex">
             <a

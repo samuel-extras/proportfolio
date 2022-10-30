@@ -62,7 +62,7 @@ const About = ({ aboutRef, contactRef, color }) => {
   const { darkText, text, primary, secondary } = color;
   return (
     <section
-      className="w-full min-h-screen my-10 md:p-10 p-4 overflow-hidden"
+      className="w-full my-10 md:p-10 p-4 overflow-hidden"
       ref={aboutRef}
     >
       <div className="flex flex-col w-full">

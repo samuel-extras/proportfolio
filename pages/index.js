@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Experience from "../components/Experience";
@@ -37,8 +37,32 @@ export default function Home() {
     color.secondary = "#374151";
   }
 
+  useEffect(() => {
+    const systemTheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (typeof window !== "undefined") {
+      if (
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+        localStorage.theme === "light"
+      ) {
+        localStorage.setItem("theme", "light");
+      } else if (!("theme" in localStorage)) {
+        localStorage.setItem("theme", "dark");
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        localStorage.setItem("theme", "light");
+      }
+    }
+  }, [systemTheme]);
+
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Samuel Ajibola Portfolio</title>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <main>
         <Nav
           homeRef={homeRef}
